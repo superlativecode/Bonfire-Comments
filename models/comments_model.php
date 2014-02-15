@@ -62,17 +62,18 @@ class Comments_model extends BF_Model {
 
 	//--------------------------------------------------------------------
 	
-	public function get_nested($id, $is_comment=false){
+	public function get_nested($id, $is_comment=false, $class='comments'){
 	    if($is_comment){
     	    $this->db->where('parent_id', $id);
 	    }else{
     	    $this->db->where('parent_id IS NULL');
     	    $this->db->where('post_id', $id);
 	    }
+	    $this->db->where('approved', 1);
         $comments = parent::find_all();
 	    
         if(!$comments) return '';
-        $html = "<ul class='comments'>";
+        $html = "<ul class='{$class}'>";
         foreach($comments as $comment){
             $html .= $this->process_comment($comment);
         }
@@ -81,13 +82,14 @@ class Comments_model extends BF_Model {
 	}
 	
 	public function process_comment($comment){
-    	$html = "<li>";
-        $html .= "<blockquote class='comment'>";
-        $html .= Parsedown::instance()->parse(strip_tags($comment->text));
-        $html .= "<footer class='subtitle text-right'>".$comment->user->display_name."&nbsp;&nbsp;&nbsp;<span class=\"btn btn-default btn-sm reply-to\" data-id=\"{$comment->id}\">Reply</span></footer></blockquote>";
-    	$html .= $this->get_nested($comment->id, true);
-    	$html .= "</li>";
-    	return $html;
+    	return $this->load->view(
+    	    'comments/comment', 
+    	    array(
+    	        'comment' => $comment, 
+    	        'nested' => $this->get_nested($comment->id, true)
+            ),
+            true
+        );
 	}
 	
 	public function get_comment_user($row){

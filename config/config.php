@@ -3,8 +3,8 @@
 $config['module_config'] = array(
 	'description'	=> 'Comments from posts',
 	'name'		=> 'Comments',
-	'version'		=> '0.0.1',
-	'author'		=> 'peter',
+	'version'		=> '0.5',
+	'author'		=> 'Superlative Code',
     'weights'       => array(
         'context'   => 0
     )
