@@ -5,7 +5,7 @@ A simple comments module. This is not a standalone module and should be used wit
 
 ###Dependices not included
 
-*   [Bonfire](https://github.com/ci-bonfire/Bonfire) by [Superlative Code](http://superlativecode.com/)
+*   [Bonfire](https://github.com/ci-bonfire/Bonfire)
 *   [Bonfire-Blog](https://github.com/superlativecode/Bonfire-Blog) by [Superlative Code](http://superlativecode.com/)
 *   [Bonfire-Images](https://github.com/superlativecode/Bonfire-Images) by [Superlative Code](http://superlativecode.com/)
 
