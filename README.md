@@ -1,7 +1,7 @@
 Bonfire Comments
 ===============
 
-A simple comments module. This is not a standalone module and should be used with [Bonfire-Blog](https://github.com/superlativecode/Bonfire-Blog) or integrate it into another module.
+A simple comments module. This is not a standalone module and should be used with [Bonfire-Blog](https://github.com/superlativecode/Bonfire-Blog) or integrate it into another bonfire module.
 
 ###Dependices not included
 
