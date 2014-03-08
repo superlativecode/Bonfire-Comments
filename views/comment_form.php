@@ -24,7 +24,6 @@
     </div>
   </div>
 </div>
-<button type="submit" class="btn btn-primary add_comment" data-toggle="modal" data-target="#commentModal">Add Comment</button>
 <?php else: ?>
     <div class="alert alert-info text-center">
         You must be logged in to comment. <br> <a href="<?php echo site_url(LOGIN_URL); ?>" class="btn btn-info">Sign In</a>

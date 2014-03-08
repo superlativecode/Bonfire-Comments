@@ -3,6 +3,8 @@ Bonfire Comments
 
 A simple comments module. This is not a standalone module and should be used with [Bonfire-Blog](https://github.com/superlativecode/Bonfire-Blog) or integrate it into another bonfire module.
 
+**Created by [Superlative Code](http://superlativecode.com/)**.
+
 ###Dependancies not included
 
 *   [Bonfire](https://github.com/ci-bonfire/Bonfire)

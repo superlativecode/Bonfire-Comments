@@ -1,6 +1,6 @@
 <div id="comments">
     <div>
-    	<h3>Comments</h3>
+    	<h3>Comments <button type="submit" class="btn btn-primary btn-sm add_comment pull-right" data-toggle="modal" data-target="#commentModal">Add Comment</button></h3>
     </div>
     
     <br />
